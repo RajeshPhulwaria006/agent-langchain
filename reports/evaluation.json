@@ -1,0 +1,677 @@
+{
+    "created": 1792767118.5043254,
+    "duration": 369.6566104888916,
+    "exitcode": 1,
+    "root": "/home/desktop-rajesh2006/Projects/multi-agent",
+    "environment": {},
+    "summary": {
+        "passed": 4,
+        "failed": 4,
+        "total": 8,
+        "collected": 8
+    },
+    "collectors": [
+        {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "agent_evals.py",
+                    "type": "Module"
+                }
+            ]
+        },
+        {
+            "nodeid": "agent_evals.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[research_transformers]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[research_vanishing_gradients]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[engineering_expense_api]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[engineering_api_latency]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[both_scientific_rag]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[both_patient_triage]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[ambiguous_request]",
+                    "type": "Function",
+                    "lineno": 94
+                },
+                {
+                    "nodeid": "agent_evals.py::test_supervisor_behavior[unsupported_live_data_no_unnecessary_delegation]",
+                    "type": "Function",
+                    "lineno": 94
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[research_transformers]",
+            "lineno": 94,
+            "outcome": "passed",
+            "keywords": [
+                "test_supervisor_behavior[research_transformers]",
+                "parametrize",
+                "pytestmark",
+                "research_transformers",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0008934560000852798,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 9.615549047000059,
+                "outcome": "passed",
+                "stdout": "\nQuestion: Explain why transformers use self-attention instead of only RNNs.\nExpected tools: {'ask_research_specialist'}\nActual tools: {'ask_research_specialist'}\nFinal answer: **Why modern Transformer models rely on self\u2011attention rather than (or in addition to) pure recurrent neural networks (RNNs)**  \n\n---  \n\n### 1. Parallelism  \n* **RNNs** compute the hidden state sequentially:\u202f`h\u209c = f(h\u209c\u208b\u2081, x\u209c)`. Each time step must wait for the previous one, so training on long seque\n"
+            },
+            "teardown": {
+                "duration": 0.0003291200000603567,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[research_vanishing_gradients]",
+            "lineno": 94,
+            "outcome": "passed",
+            "keywords": [
+                "test_supervisor_behavior[research_vanishing_gradients]",
+                "parametrize",
+                "pytestmark",
+                "research_vanishing_gradients",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.000931626000237884,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 38.781726467000226,
+                "outcome": "passed",
+                "stdout": "\nQuestion: Explain the vanishing gradient problem and how residual connections help.\nExpected tools: {'ask_research_specialist'}\nActual tools: {'ask_research_specialist'}\nFinal answer: **The Vanishing Gradient Problem**\n\n| What it is | In very deep neural networks the gradients that are back\u2011propagated to the early layers become exponentially small. When the gradient approaches zero, the weights of those layers receive almost no update, so they learn extremely slowly or not at all\n"
+            },
+            "teardown": {
+                "duration": 0.00034326999957556836,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[engineering_expense_api]",
+            "lineno": 94,
+            "outcome": "failed",
+            "keywords": [
+                "test_supervisor_behavior[engineering_expense_api]",
+                "parametrize",
+                "pytestmark",
+                "engineering_expense_api",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0008505149999109562,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 69.80746495900075,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/desktop-rajesh2006/Projects/multi-agent/venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                    "lineno": 1044,
+                    "message": "groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9200, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nDuring task with name 'model' and id '294dc0e6-69cb-0dc6-5182-24db2c883836'"
+                },
+                "traceback": [
+                    {
+                        "path": "agent_evals.py",
+                        "lineno": 100,
+                        "message": ""
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 4001,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 3058,
+                        "message": "in stream"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py",
+                        "lineno": 208,
+                        "message": "in tick"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py",
+                        "lineno": 617,
+                        "message": "in run_with_retry"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 707,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 447,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1536,
+                        "message": "in model_node"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1506,
+                        "message": "in _execute_model_sync"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/runnables/base.py",
+                        "lineno": 6018,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 488,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1877,
+                        "message": "in generate_prompt"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1684,
+                        "message": "in generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 2022,
+                        "message": "in _generate_with_cache"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_groq/chat_models.py",
+                        "lineno": 627,
+                        "message": "in _generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/resources/chat/completions.py",
+                        "lineno": 461,
+                        "message": "in create"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1242,
+                        "message": "in post"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1044,
+                        "message": "APIStatusError"
+                    }
+                ],
+                "longrepr": "question = 'Design a secure REST API for a personal expense tracker. Cover authentication, authorization, validation, and testing.'\nexpected_tools = {'ask_engineering_specialist'}, forbidden_tools = set()\n\n    @pytest.mark.parametrize(\n        \"question, expected_tools, forbidden_tools\",\n        TEST_CASES,\n    )\n    def test_supervisor_behavior(question, expected_tools, forbidden_tools):\n>       result = supervisor.invoke({\n            \"messages\": [\n                {\n                    \"role\": \"user\",\n                    \"content\": question,\n                }\n            ]\n        })\n\nagent_evals.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:4001: in invoke\n    for chunk in self.stream(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:3058: in stream\n    for _ in runner.tick(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py:208: in tick\n    run_with_retry(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py:617: in run_with_retry\n    return task.proc.invoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:707: in invoke\n    input = context.run(step.invoke, input, config, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:447: in invoke\n    ret = self.func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1536: in model_node\n    model_response = _execute_model_sync(request)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1506: in _execute_model_sync\n    output = model_.invoke(messages)\n             ^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/runnables/base.py:6018: in invoke\n    return self.bound.invoke(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:488: in invoke\n    self.generate_prompt(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1877: in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1684: in generate\n    self._generate_with_cache(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:2022: in _generate_with_cache\n    result = self._generate(\nvenv/lib64/python3.14/site-packages/langchain_groq/chat_models.py:627: in _generate\n    response = self.client.create(messages=message_dicts, **params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/groq/resources/chat/completions.py:461: in create\n    return self._post(\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1242: in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <groq.Groq object at 0x7a5b7ac2d940>, cast_to = <class 'groq.types.chat.chat_completion.ChatCompletion'>\noptions = FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GI...parameters': {'properties': {'task': {'type': 'string'}}, 'required': ['task'], 'type': 'object'}}}]}, extra_json=None)\nstream = False, stream_cls = groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]\n\n    def request(\n        self,\n        cast_to: Type[ResponseT],\n        options: FinalRequestOptions,\n        *,\n        stream: bool = False,\n        stream_cls: type[_StreamT] | None = None,\n    ) -> ResponseT | _StreamT:\n        cast_to = self._maybe_override_cast_to(cast_to, options)\n    \n        # create a copy of the options we were given so that if the\n        # options are mutated later & we then retry, the retries are\n        # given the original options\n        input_options = model_copy(options)\n        if input_options.idempotency_key is None and input_options.method.lower() != \"get\":\n            # ensure the idempotency key is reused between requests\n            input_options.idempotency_key = self._idempotency_key()\n    \n        response: httpx.Response | None = None\n        max_retries = input_options.get_max_retries(self.max_retries)\n    \n        retries_taken = 0\n        for retries_taken in range(max_retries + 1):\n            options = model_copy(input_options)\n            options = self._prepare_options(options)\n    \n            remaining_retries = max_retries - retries_taken\n            request = self._build_request(options, retries_taken=retries_taken)\n            self._prepare_request(request)\n    \n            kwargs: HttpxSendArgs = {}\n            if self.custom_auth is not None:\n                kwargs[\"auth\"] = self.custom_auth\n    \n            if options.follow_redirects is not None:\n                kwargs[\"follow_redirects\"] = options.follow_redirects\n    \n            log.debug(\"Sending HTTP Request: %s %s\", request.method, request.url)\n    \n            response = None\n            try:\n                response = self._client.send(\n                    request,\n                    stream=stream or self._should_stream_response_body(request=request),\n                    **kwargs,\n                )\n            except httpx.TimeoutException as err:\n                log.debug(\"Encountered httpx.TimeoutException\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising timeout error\")\n                raise APITimeoutError(request=request) from err\n            except Exception as err:\n                log.debug(\"Encountered Exception\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising connection error\")\n                raise APIConnectionError(request=request) from err\n    \n            log.debug(\n                'HTTP Response: %s %s \"%i %s\" %s',\n                request.method,\n                request.url,\n                response.status_code,\n                response.reason_phrase,\n                response.headers,\n            )\n    \n            try:\n                response.raise_for_status()\n            except httpx.HTTPStatusError as err:  # thrown on 4xx and 5xx status code\n                log.debug(\"Encountered httpx.HTTPStatusError\", exc_info=True)\n    \n                if remaining_retries > 0 and self._should_retry(err.response):\n                    err.response.close()\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=response,\n                    )\n                    continue\n    \n                # If the response is streamed then we need to explicitly read the response\n                # to completion before attempting to access the response text.\n                if not err.response.is_closed:\n                    err.response.read()\n    \n                log.debug(\"Re-raising status error\")\n>               raise self._make_status_error_from_response(err.response) from None\nE               groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9200, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nE               During task with name 'model' and id '294dc0e6-69cb-0dc6-5182-24db2c883836'\n\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1044: APIStatusError"
+            },
+            "teardown": {
+                "duration": 0.00043689300036930945,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[engineering_api_latency]",
+            "lineno": 94,
+            "outcome": "failed",
+            "keywords": [
+                "test_supervisor_behavior[engineering_api_latency]",
+                "parametrize",
+                "pytestmark",
+                "engineering_api_latency",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0007345709991568583,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 74.97536836099971,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/desktop-rajesh2006/Projects/multi-agent/venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                    "lineno": 1044,
+                    "message": "groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9256, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nDuring task with name 'model' and id 'e1b4e0a6-99be-1865-4f2e-6499c5902bcd'"
+                },
+                "traceback": [
+                    {
+                        "path": "agent_evals.py",
+                        "lineno": 100,
+                        "message": ""
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 4001,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 3058,
+                        "message": "in stream"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py",
+                        "lineno": 208,
+                        "message": "in tick"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py",
+                        "lineno": 617,
+                        "message": "in run_with_retry"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 707,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 447,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1536,
+                        "message": "in model_node"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1506,
+                        "message": "in _execute_model_sync"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/runnables/base.py",
+                        "lineno": 6018,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 488,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1877,
+                        "message": "in generate_prompt"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1684,
+                        "message": "in generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 2022,
+                        "message": "in _generate_with_cache"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_groq/chat_models.py",
+                        "lineno": 627,
+                        "message": "in _generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/resources/chat/completions.py",
+                        "lineno": 461,
+                        "message": "in create"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1242,
+                        "message": "in post"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1044,
+                        "message": "APIStatusError"
+                    }
+                ],
+                "longrepr": "question = 'A FastAPI endpoint is slow because it makes several sequential HTTP requests. Explain how to diagnose and improve its latency.'\nexpected_tools = {'ask_engineering_specialist'}, forbidden_tools = set()\n\n    @pytest.mark.parametrize(\n        \"question, expected_tools, forbidden_tools\",\n        TEST_CASES,\n    )\n    def test_supervisor_behavior(question, expected_tools, forbidden_tools):\n>       result = supervisor.invoke({\n            \"messages\": [\n                {\n                    \"role\": \"user\",\n                    \"content\": question,\n                }\n            ]\n        })\n\nagent_evals.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:4001: in invoke\n    for chunk in self.stream(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:3058: in stream\n    for _ in runner.tick(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py:208: in tick\n    run_with_retry(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py:617: in run_with_retry\n    return task.proc.invoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:707: in invoke\n    input = context.run(step.invoke, input, config, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:447: in invoke\n    ret = self.func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1536: in model_node\n    model_response = _execute_model_sync(request)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1506: in _execute_model_sync\n    output = model_.invoke(messages)\n             ^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/runnables/base.py:6018: in invoke\n    return self.bound.invoke(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:488: in invoke\n    self.generate_prompt(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1877: in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1684: in generate\n    self._generate_with_cache(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:2022: in _generate_with_cache\n    result = self._generate(\nvenv/lib64/python3.14/site-packages/langchain_groq/chat_models.py:627: in _generate\n    response = self.client.create(messages=message_dicts, **params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/groq/resources/chat/completions.py:461: in create\n    return self._post(\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1242: in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <groq.Groq object at 0x7a5b7ac2d940>, cast_to = <class 'groq.types.chat.chat_completion.ChatCompletion'>\noptions = FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GI...parameters': {'properties': {'task': {'type': 'string'}}, 'required': ['task'], 'type': 'object'}}}]}, extra_json=None)\nstream = False, stream_cls = groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]\n\n    def request(\n        self,\n        cast_to: Type[ResponseT],\n        options: FinalRequestOptions,\n        *,\n        stream: bool = False,\n        stream_cls: type[_StreamT] | None = None,\n    ) -> ResponseT | _StreamT:\n        cast_to = self._maybe_override_cast_to(cast_to, options)\n    \n        # create a copy of the options we were given so that if the\n        # options are mutated later & we then retry, the retries are\n        # given the original options\n        input_options = model_copy(options)\n        if input_options.idempotency_key is None and input_options.method.lower() != \"get\":\n            # ensure the idempotency key is reused between requests\n            input_options.idempotency_key = self._idempotency_key()\n    \n        response: httpx.Response | None = None\n        max_retries = input_options.get_max_retries(self.max_retries)\n    \n        retries_taken = 0\n        for retries_taken in range(max_retries + 1):\n            options = model_copy(input_options)\n            options = self._prepare_options(options)\n    \n            remaining_retries = max_retries - retries_taken\n            request = self._build_request(options, retries_taken=retries_taken)\n            self._prepare_request(request)\n    \n            kwargs: HttpxSendArgs = {}\n            if self.custom_auth is not None:\n                kwargs[\"auth\"] = self.custom_auth\n    \n            if options.follow_redirects is not None:\n                kwargs[\"follow_redirects\"] = options.follow_redirects\n    \n            log.debug(\"Sending HTTP Request: %s %s\", request.method, request.url)\n    \n            response = None\n            try:\n                response = self._client.send(\n                    request,\n                    stream=stream or self._should_stream_response_body(request=request),\n                    **kwargs,\n                )\n            except httpx.TimeoutException as err:\n                log.debug(\"Encountered httpx.TimeoutException\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising timeout error\")\n                raise APITimeoutError(request=request) from err\n            except Exception as err:\n                log.debug(\"Encountered Exception\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising connection error\")\n                raise APIConnectionError(request=request) from err\n    \n            log.debug(\n                'HTTP Response: %s %s \"%i %s\" %s',\n                request.method,\n                request.url,\n                response.status_code,\n                response.reason_phrase,\n                response.headers,\n            )\n    \n            try:\n                response.raise_for_status()\n            except httpx.HTTPStatusError as err:  # thrown on 4xx and 5xx status code\n                log.debug(\"Encountered httpx.HTTPStatusError\", exc_info=True)\n    \n                if remaining_retries > 0 and self._should_retry(err.response):\n                    err.response.close()\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=response,\n                    )\n                    continue\n    \n                # If the response is streamed then we need to explicitly read the response\n                # to completion before attempting to access the response text.\n                if not err.response.is_closed:\n                    err.response.read()\n    \n                log.debug(\"Re-raising status error\")\n>               raise self._make_status_error_from_response(err.response) from None\nE               groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9256, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nE               During task with name 'model' and id 'e1b4e0a6-99be-1865-4f2e-6499c5902bcd'\n\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1044: APIStatusError"
+            },
+            "teardown": {
+                "duration": 0.0003802110004471615,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[both_scientific_rag]",
+            "lineno": 94,
+            "outcome": "failed",
+            "keywords": [
+                "test_supervisor_behavior[both_scientific_rag]",
+                "parametrize",
+                "pytestmark",
+                "both_scientific_rag",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0006076970003050519,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 75.8124479019998,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/desktop-rajesh2006/Projects/multi-agent/venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                    "lineno": 1044,
+                    "message": "groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8852, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nDuring task with name 'model' and id '8751d994-3d38-de1e-3bcc-9d903afbfbb0'"
+                },
+                "traceback": [
+                    {
+                        "path": "agent_evals.py",
+                        "lineno": 100,
+                        "message": ""
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 4001,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 3058,
+                        "message": "in stream"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py",
+                        "lineno": 208,
+                        "message": "in tick"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py",
+                        "lineno": 617,
+                        "message": "in run_with_retry"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 707,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 447,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1536,
+                        "message": "in model_node"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1506,
+                        "message": "in _execute_model_sync"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/runnables/base.py",
+                        "lineno": 6018,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 488,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1877,
+                        "message": "in generate_prompt"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1684,
+                        "message": "in generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 2022,
+                        "message": "in _generate_with_cache"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_groq/chat_models.py",
+                        "lineno": 627,
+                        "message": "in _generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/resources/chat/completions.py",
+                        "lineno": 461,
+                        "message": "in create"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1242,
+                        "message": "in post"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1044,
+                        "message": "APIStatusError"
+                    }
+                ],
+                "longrepr": "question = 'I want to build a RAG system for scientific papers. Explain how retrieval quality affects answer accuracy, then recommend an architecture and testing strategy.'\nexpected_tools = {'ask_engineering_specialist', 'ask_research_specialist'}, forbidden_tools = set()\n\n    @pytest.mark.parametrize(\n        \"question, expected_tools, forbidden_tools\",\n        TEST_CASES,\n    )\n    def test_supervisor_behavior(question, expected_tools, forbidden_tools):\n>       result = supervisor.invoke({\n            \"messages\": [\n                {\n                    \"role\": \"user\",\n                    \"content\": question,\n                }\n            ]\n        })\n\nagent_evals.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:4001: in invoke\n    for chunk in self.stream(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:3058: in stream\n    for _ in runner.tick(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py:208: in tick\n    run_with_retry(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py:617: in run_with_retry\n    return task.proc.invoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:707: in invoke\n    input = context.run(step.invoke, input, config, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:447: in invoke\n    ret = self.func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1536: in model_node\n    model_response = _execute_model_sync(request)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1506: in _execute_model_sync\n    output = model_.invoke(messages)\n             ^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/runnables/base.py:6018: in invoke\n    return self.bound.invoke(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:488: in invoke\n    self.generate_prompt(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1877: in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1684: in generate\n    self._generate_with_cache(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:2022: in _generate_with_cache\n    result = self._generate(\nvenv/lib64/python3.14/site-packages/langchain_groq/chat_models.py:627: in _generate\n    response = self.client.create(messages=message_dicts, **params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/groq/resources/chat/completions.py:461: in create\n    return self._post(\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1242: in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <groq.Groq object at 0x7a5b7ac2d940>, cast_to = <class 'groq.types.chat.chat_completion.ChatCompletion'>\noptions = FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GI...parameters': {'properties': {'task': {'type': 'string'}}, 'required': ['task'], 'type': 'object'}}}]}, extra_json=None)\nstream = False, stream_cls = groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]\n\n    def request(\n        self,\n        cast_to: Type[ResponseT],\n        options: FinalRequestOptions,\n        *,\n        stream: bool = False,\n        stream_cls: type[_StreamT] | None = None,\n    ) -> ResponseT | _StreamT:\n        cast_to = self._maybe_override_cast_to(cast_to, options)\n    \n        # create a copy of the options we were given so that if the\n        # options are mutated later & we then retry, the retries are\n        # given the original options\n        input_options = model_copy(options)\n        if input_options.idempotency_key is None and input_options.method.lower() != \"get\":\n            # ensure the idempotency key is reused between requests\n            input_options.idempotency_key = self._idempotency_key()\n    \n        response: httpx.Response | None = None\n        max_retries = input_options.get_max_retries(self.max_retries)\n    \n        retries_taken = 0\n        for retries_taken in range(max_retries + 1):\n            options = model_copy(input_options)\n            options = self._prepare_options(options)\n    \n            remaining_retries = max_retries - retries_taken\n            request = self._build_request(options, retries_taken=retries_taken)\n            self._prepare_request(request)\n    \n            kwargs: HttpxSendArgs = {}\n            if self.custom_auth is not None:\n                kwargs[\"auth\"] = self.custom_auth\n    \n            if options.follow_redirects is not None:\n                kwargs[\"follow_redirects\"] = options.follow_redirects\n    \n            log.debug(\"Sending HTTP Request: %s %s\", request.method, request.url)\n    \n            response = None\n            try:\n                response = self._client.send(\n                    request,\n                    stream=stream or self._should_stream_response_body(request=request),\n                    **kwargs,\n                )\n            except httpx.TimeoutException as err:\n                log.debug(\"Encountered httpx.TimeoutException\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising timeout error\")\n                raise APITimeoutError(request=request) from err\n            except Exception as err:\n                log.debug(\"Encountered Exception\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising connection error\")\n                raise APIConnectionError(request=request) from err\n    \n            log.debug(\n                'HTTP Response: %s %s \"%i %s\" %s',\n                request.method,\n                request.url,\n                response.status_code,\n                response.reason_phrase,\n                response.headers,\n            )\n    \n            try:\n                response.raise_for_status()\n            except httpx.HTTPStatusError as err:  # thrown on 4xx and 5xx status code\n                log.debug(\"Encountered httpx.HTTPStatusError\", exc_info=True)\n    \n                if remaining_retries > 0 and self._should_retry(err.response):\n                    err.response.close()\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=response,\n                    )\n                    continue\n    \n                # If the response is streamed then we need to explicitly read the response\n                # to completion before attempting to access the response text.\n                if not err.response.is_closed:\n                    err.response.read()\n    \n                log.debug(\"Re-raising status error\")\n>               raise self._make_status_error_from_response(err.response) from None\nE               groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8852, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nE               During task with name 'model' and id '8751d994-3d38-de1e-3bcc-9d903afbfbb0'\n\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1044: APIStatusError"
+            },
+            "teardown": {
+                "duration": 0.00036184100008540554,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[both_patient_triage]",
+            "lineno": 94,
+            "outcome": "failed",
+            "keywords": [
+                "test_supervisor_behavior[both_patient_triage]",
+                "parametrize",
+                "pytestmark",
+                "both_patient_triage",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0007392110001092078,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 76.5100102589995,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/home/desktop-rajesh2006/Projects/multi-agent/venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                    "lineno": 1044,
+                    "message": "groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9452, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nDuring task with name 'model' and id '8d3de52f-3aca-10f9-59e5-0008495c2b80'"
+                },
+                "traceback": [
+                    {
+                        "path": "agent_evals.py",
+                        "lineno": 100,
+                        "message": ""
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 4001,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/main.py",
+                        "lineno": 3058,
+                        "message": "in stream"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py",
+                        "lineno": 208,
+                        "message": "in tick"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py",
+                        "lineno": 617,
+                        "message": "in run_with_retry"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 707,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py",
+                        "lineno": 447,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1536,
+                        "message": "in model_node"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain/agents/factory.py",
+                        "lineno": 1506,
+                        "message": "in _execute_model_sync"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/runnables/base.py",
+                        "lineno": 6018,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 488,
+                        "message": "in invoke"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1877,
+                        "message": "in generate_prompt"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 1684,
+                        "message": "in generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py",
+                        "lineno": 2022,
+                        "message": "in _generate_with_cache"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/langchain_groq/chat_models.py",
+                        "lineno": 627,
+                        "message": "in _generate"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/resources/chat/completions.py",
+                        "lineno": 461,
+                        "message": "in create"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1242,
+                        "message": "in post"
+                    },
+                    {
+                        "path": "venv/lib64/python3.14/site-packages/groq/_base_client.py",
+                        "lineno": 1044,
+                        "message": "APIStatusError"
+                    }
+                ],
+                "longrepr": "question = 'I am building an AI system to help doctors prioritize patients. Discuss the risks of model predictions and recommend safeguards, system architecture, and audit logging.'\nexpected_tools = {'ask_engineering_specialist', 'ask_research_specialist'}, forbidden_tools = set()\n\n    @pytest.mark.parametrize(\n        \"question, expected_tools, forbidden_tools\",\n        TEST_CASES,\n    )\n    def test_supervisor_behavior(question, expected_tools, forbidden_tools):\n>       result = supervisor.invoke({\n            \"messages\": [\n                {\n                    \"role\": \"user\",\n                    \"content\": question,\n                }\n            ]\n        })\n\nagent_evals.py:100: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:4001: in invoke\n    for chunk in self.stream(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/main.py:3058: in stream\n    for _ in runner.tick(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_runner.py:208: in tick\n    run_with_retry(\nvenv/lib64/python3.14/site-packages/langgraph/pregel/_retry.py:617: in run_with_retry\n    return task.proc.invoke(task.input, config)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:707: in invoke\n    input = context.run(step.invoke, input, config, **kwargs)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langgraph/_internal/_runnable.py:447: in invoke\n    ret = self.func(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1536: in model_node\n    model_response = _execute_model_sync(request)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain/agents/factory.py:1506: in _execute_model_sync\n    output = model_.invoke(messages)\n             ^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/runnables/base.py:6018: in invoke\n    return self.bound.invoke(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:488: in invoke\n    self.generate_prompt(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1877: in generate_prompt\n    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:1684: in generate\n    self._generate_with_cache(\nvenv/lib64/python3.14/site-packages/langchain_core/language_models/chat_models.py:2022: in _generate_with_cache\n    result = self._generate(\nvenv/lib64/python3.14/site-packages/langchain_groq/chat_models.py:627: in _generate\n    response = self.client.create(messages=message_dicts, **params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nvenv/lib64/python3.14/site-packages/groq/resources/chat/completions.py:461: in create\n    return self._post(\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1242: in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <groq.Groq object at 0x7a5b7ac2d940>, cast_to = <class 'groq.types.chat.chat_completion.ChatCompletion'>\noptions = FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GI...parameters': {'properties': {'task': {'type': 'string'}}, 'required': ['task'], 'type': 'object'}}}]}, extra_json=None)\nstream = False, stream_cls = groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]\n\n    def request(\n        self,\n        cast_to: Type[ResponseT],\n        options: FinalRequestOptions,\n        *,\n        stream: bool = False,\n        stream_cls: type[_StreamT] | None = None,\n    ) -> ResponseT | _StreamT:\n        cast_to = self._maybe_override_cast_to(cast_to, options)\n    \n        # create a copy of the options we were given so that if the\n        # options are mutated later & we then retry, the retries are\n        # given the original options\n        input_options = model_copy(options)\n        if input_options.idempotency_key is None and input_options.method.lower() != \"get\":\n            # ensure the idempotency key is reused between requests\n            input_options.idempotency_key = self._idempotency_key()\n    \n        response: httpx.Response | None = None\n        max_retries = input_options.get_max_retries(self.max_retries)\n    \n        retries_taken = 0\n        for retries_taken in range(max_retries + 1):\n            options = model_copy(input_options)\n            options = self._prepare_options(options)\n    \n            remaining_retries = max_retries - retries_taken\n            request = self._build_request(options, retries_taken=retries_taken)\n            self._prepare_request(request)\n    \n            kwargs: HttpxSendArgs = {}\n            if self.custom_auth is not None:\n                kwargs[\"auth\"] = self.custom_auth\n    \n            if options.follow_redirects is not None:\n                kwargs[\"follow_redirects\"] = options.follow_redirects\n    \n            log.debug(\"Sending HTTP Request: %s %s\", request.method, request.url)\n    \n            response = None\n            try:\n                response = self._client.send(\n                    request,\n                    stream=stream or self._should_stream_response_body(request=request),\n                    **kwargs,\n                )\n            except httpx.TimeoutException as err:\n                log.debug(\"Encountered httpx.TimeoutException\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising timeout error\")\n                raise APITimeoutError(request=request) from err\n            except Exception as err:\n                log.debug(\"Encountered Exception\", exc_info=True)\n    \n                if remaining_retries > 0:\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=None,\n                    )\n                    continue\n    \n                log.debug(\"Raising connection error\")\n                raise APIConnectionError(request=request) from err\n    \n            log.debug(\n                'HTTP Response: %s %s \"%i %s\" %s',\n                request.method,\n                request.url,\n                response.status_code,\n                response.reason_phrase,\n                response.headers,\n            )\n    \n            try:\n                response.raise_for_status()\n            except httpx.HTTPStatusError as err:  # thrown on 4xx and 5xx status code\n                log.debug(\"Encountered httpx.HTTPStatusError\", exc_info=True)\n    \n                if remaining_retries > 0 and self._should_retry(err.response):\n                    err.response.close()\n                    self._sleep_for_retry(\n                        retries_taken=retries_taken,\n                        max_retries=max_retries,\n                        options=input_options,\n                        response=response,\n                    )\n                    continue\n    \n                # If the response is streamed then we need to explicitly read the response\n                # to completion before attempting to access the response text.\n                if not err.response.is_closed:\n                    err.response.read()\n    \n                log.debug(\"Re-raising status error\")\n>               raise self._make_status_error_from_response(err.response) from None\nE               groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m0agwmxjecjtbxkm5adetm85` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9452, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}\nE               During task with name 'model' and id '8d3de52f-3aca-10f9-59e5-0008495c2b80'\n\nvenv/lib64/python3.14/site-packages/groq/_base_client.py:1044: APIStatusError"
+            },
+            "teardown": {
+                "duration": 0.0003638200005298131,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[ambiguous_request]",
+            "lineno": 94,
+            "outcome": "passed",
+            "keywords": [
+                "test_supervisor_behavior[ambiguous_request]",
+                "parametrize",
+                "pytestmark",
+                "ambiguous_request",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.000742161999369273,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 18.135978829000123,
+                "outcome": "passed",
+                "stdout": "\nQuestion: Please improve it.\nExpected tools: set()\nActual tools: set()\nFinal answer: I\u2019m happy to help, but I need a bit more information. Could you let me know what you\u2019d like improved\u2014e.g., a piece of writing, a code snippet, a design, a presentation, etc.? Please share the material (or a description of it) and any specific goals or constraints you have in mind.\n"
+            },
+            "teardown": {
+                "duration": 0.00031638900054531405,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "agent_evals.py::test_supervisor_behavior[unsupported_live_data_no_unnecessary_delegation]",
+            "lineno": 94,
+            "outcome": "passed",
+            "keywords": [
+                "test_supervisor_behavior[unsupported_live_data_no_unnecessary_delegation]",
+                "parametrize",
+                "pytestmark",
+                "unsupported_live_data_no_unnecessary_delegation",
+                "agent_evals.py",
+                "multi-agent",
+                ""
+            ],
+            "setup": {
+                "duration": 0.0009114659997067065,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 3.0442744609999863,
+                "outcome": "passed",
+                "stdout": "\nQuestion: What is the exact current price of a stock right now? No live market data is provided, and you cannot browse. Explain this limitation and do not delegate.\nExpected tools: set()\nActual tools: set()\nFinal answer: I\u2019m unable to give you the exact current price of any stock at this moment.\u202fMy training data only includes information that was publicly available up to\u202fSeptember\u202f2021, and I don\u2019t have any live\u2011feed connections, web\u2011browsing capability, or access to real\u2011time market APIs. Because of that, I can\u2019t r\n"
+            },
+            "teardown": {
+                "duration": 0.0012638059997698292,
+                "outcome": "passed"
+            }
+        }
+    ]
+}
